@@ -1,10 +1,9 @@
 language: node_js
-required: sudo
 node_js:
 - 8.11.3
 before_install:
 - openssl aes-256-cbc -K $encrypted_7700b37223df_key -iv $encrypted_7700b37223df_iv
-  -in test_key.enc -out /root/.ssh/test_key -d
+  -in test_key.enc -out test_key -d
 - chmod 777 /root/.ssh/test_key
 scripts:
   - npm run test
