@@ -2,8 +2,9 @@ language: node_js
 node_js:
 - 8.11.3
 before_install:
-# - openssl aes-256-cbc -K $encrypted_7700b37223df_key -iv $encrypted_7700b37223df_iv
-#   -in test_key.enc -out test_key -d
+- openssl aes-256-cbc -K $encrypted_7700b37223df_key -iv $encrypted_7700b37223df_iv
+  -in test_key.enc -out test_key -d
+- mv test_key ~/.ssh -f
 scripts:
   - npm run test
 after_success:
