@@ -1,4 +1,5 @@
 language: node_js
+required: sudo
 node_js:
 - 8.11.3
 before_install:
